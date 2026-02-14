@@ -7,25 +7,48 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-</head><style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px);}
-  to { opacity: 1; transform: translateY(0);}
-}
-.animate-fadeIn {
-  animation: fadeIn 1s forwards;
-}
-</style>
+
+  <!-- Animations simples -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s forwards;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 relative">
 
 
+  <!-- Background flou -->
+  <div class="fixed inset-0 -z-10">
+    <img
+      src="assets/images/background.jpeg"
+      alt="Background"
+      class="w-full h-full object-cover blur-lg scale-105"
+    />
+    <div class="absolute inset-0 bg-white/70"></div>
+  </div>
 
-<body class="font-sans bg-gray-100 text-gray-800">
-  <!-- ===== MENU DE NAVIGATION ===== -->
-<header id class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur shadow z-50">
+  <!-- CONTENU -->
+  <main class="relative">
+    <!-- ton portfolio ici -->
+  </main>
+
+</body>
+
+  />
+  <div class="absolute inset-0 bg-white/70"></div>
+</div>
+
+<!-- ===== MENU DE NAVIGATION ===== -->
+<header class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur shadow z-50">
   <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
     <div class="text-xl font-bold text-blue-600">Dieynaba Diallo</div>
     <ul class="flex space-x-6">
-      <li><a href= "#home" class="hover:text-blue-500 transition">Accueil</a></li>
+      <li><a href="#home" class="hover:text-blue-500 transition">Accueil</a></li>
       <li><a href="#about" class="hover:text-blue-500 transition">À propos</a></li>
       <li><a href="#skills" class="hover:text-blue-500 transition">Compétences</a></li>
       <li><a href="#projets" class="hover:text-blue-500 transition">Projets</a></li>
@@ -34,31 +57,37 @@
   </nav>
 </header>
 
+<!-- ===== PAGE DE GARDE ===== -->
+<header id="home" class="min-h-screen flex flex-col justify-center items-center
+               bg-gradient-to-r from-blue-600 to-indigo-700
+               text-white text-center px-4 pt-24">
+  <img src="images/profil.jpg" alt="Photo de Dieynaba Diallo"
+       class="w-44 h-44 rounded-full border-4 border-white shadow-xl mb-6 object-cover hover:scale-105 transition-transform duration-500">
 
-<!-- ===== HEADER / PAGE DE GARDE ===== -->
-<header id class="min-h-screen flex flex-col justify-center items-center bg-white text-center px-4">
-  
-       <img src="images/profil.jpg" alt="Photo de profil"
-     class="w-44 h-44 rounded-full border-4 border-white shadow-xl object-cover hover:scale-105 transition-transform duration-500">
+  <h1 class="text-4xl md:text-5xl font-bold animate-fadeIn">Dieynaba Diallo</h1>
 
-
-  <h1 class="text-4xl font-bold">Dieynaba Diallo</h1>
-  <p class="text-xl text-blue-600 mt-2">
-    Développeuse Web Debutante
+  <p class="text-xl mt-3 font-light animate-fadeIn delay-200">
+    Étudiante en génie informatique · Développeuse Web
   </p>
 
-  <p class="max-w-xl mt-6 text-gray-600">
-    Étudiante en génie informatique, passionnée par le développement web
-    et la création d’interfaces modernes et accessibles.
+  <p class="max-w-xl mt-6 text-red-100 animate-fadeIn delay-400">
+    Je conçois des sites web modernes, responsives et performants
+    avec HTML, Tailwind CSS et JavaScript.
   </p>
+
+  <a href="#projets"
+     class="mt-8 inline-block bg-white text-blue-700 px-6 py-3
+            rounded-full font-semibold hover:bg-gray-200 transition animate-fadeIn delay-600">
+    Voir mes projets
+  </a>
 </header>
 
 <!-- ===== À PROPOS ===== -->
-<section id class="py-16 bg-gray-100">
+<section id="about" class="py-16 bg-gray-100">
   <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-6 text-center">À propos de moi</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center animate-fadeIn">À propos de moi</h2>
 
-    <p class="text-gray-700 text-center">
+    <p class="text-gray-700 text-center animate-fadeIn delay-200">
       Je suis débutante en développement web et je me forme aux technologies
       front-end comme HTML, Tailwind CSS et JavaScript.
       Mon objectif est de créer des sites web modernes, rapides et responsives.
@@ -67,60 +96,68 @@
 </section>
 
 <!-- ===== COMPÉTENCES ===== -->
-<section id class="py-16 bg-white">
+<section id="skills" class="py-16 bg-white">
   <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-10 text-center">Compétences</h2>
+    <h2 class="text-3xl font-bold mb-10 text-center animate-fadeIn">Compétences</h2>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div class="bg-gray-100 p-4 rounded-lg">HTML</div>
-      <div class="bg-gray-100 p-4 rounded-lg">Tailwind CSS</div>
-      <div class="bg-gray-100 p-4 rounded-lg">JavaScript</div>
-      <div class="bg-gray-100 p-4 rounded-lg">Git & GitHub</div>
+      <div class="bg-gray-100 p-4 rounded-lg hover:scale-105 transition transform duration-500">HTML</div>
+      <div class="bg-gray-100 p-4 rounded-lg hover:scale-105 transition transform duration-500">Tailwind CSS</div>
+      <div class="bg-gray-100 p-4 rounded-lg hover:scale-105 transition transform duration-500">JavaScript</div>
+      <div class="bg-gray-100 p-4 rounded-lg hover:scale-105 transition transform duration-500">Git & GitHub</div>
     </div>
   </div>
 </section>
+<section class="bg-white/80 backdrop-blur-md rounded-xl shadow-md p-8 max-w-5xl mx-auto my-12">
 
 <!-- ===== PROJETS ===== -->
-<section id class="py-16 bg-gray-100">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-12 text-center">Projets</h2>
+<section id="projets" class="py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 animate-fadeIn">Mes projets</h2>
 
-    <div class="bg-white rounded-xl shadow-lg p-6">
-      <h3 class="text-2xl font-semibold mb-2">
-        Page d’inscription – SENCON 2026
-      </h3>
+    <div class="grid md:grid-cols-2 gap-8">
 
-      <p class="text-gray-600 mb-4">
-        Création d’une page web d’inscription pour un événement professionnel
-        avec un design moderne et responsive.
-      </p>
+      <!-- Projet 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 hover:scale-105 transition duration-500">
+        <img src="images/projet1.jpg" alt="Projet 1" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Page d’inscription – SENCON 2026</h3>
+          <p class="text-gray-600 mb-4">
+            Page web d’inscription pour un événement professionnel avec un design responsive.
+          </p>
+          <span class="text-sm text-blue-600 font-semibold">HTML · Tailwind CSS</span>
+        </div>
+      </div>
 
-      <ul class="text-sm text-gray-500 list-disc list-inside mb-4">
-        <li>HTML5</li>
-        <li>Tailwind CSS</li>
-        <li>Responsive Design</li>
-      </ul>
+      <!-- Projet 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 hover:scale-105 transition duration-500">
+        <img src="images/projet2.jpg" alt="Projet 2" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Portfolio personnel</h3>
+          <p class="text-gray-600 mb-4">
+            Portfolio responsive présentant mes compétences et mes projets.
+          </p>
+          <span class="text-sm text-blue-600 font-semibold">HTML · Tailwind CSS</span>
+        </div>
+      </div>
 
-      <a href="#"
-         class="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
-        
-      </a>
     </div>
   </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id class="py-16 bg-white">
+<section id="contact" class="py-16 bg-white">
   <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6">Contact</h2>
+    <h2 class="text-3xl font-bold mb-6 animate-fadeIn">Contact</h2>
 
-    <p class="text-gray-600 mb-4">
+    <p class="text-gray-600 mb-4 animate-fadeIn delay-200">
       N’hésitez pas à me contacter pour toute collaboration ou opportunité.
     </p>
 
-    <p class="font-semibold">📧 77 308 14 31</p>
-     <p class="font-semibold">📧diallodieynaba854@gmail.com</p>
+    <p class="font-semibold animate-fadeIn delay-400">📧 diallodieynaba@gmail.com</p>
+    <p class="font-semibold animate-fadeIn delay-400">📧 77 308 14 31</p>
   </div>
+ 
 </section>
 
 <footer class="py-6 text-center text-sm text-gray-500">
@@ -128,4 +165,18 @@
 </footer>
 
 </body>
+<body>
+  <!-- background -->
+
+  <main class="relative">
+    <!-- navbar -->
+    <!-- section accueil -->
+    <!-- à propos -->
+    <!-- compétences -->
+    <!-- projets -->
+    <!-- contact -->
+  </main>
+
+</body>
+
 </html>
